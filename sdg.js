@@ -4,8 +4,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const slides = [
-        "img/doctors-image.jpg",
-         "img/physicalHealth.jpg",
+        "https://images.squarespace-cdn.com/content/v1/5d1bfb1928c4c60001b97d89/1596231389940-QZWRDWMHXBGM5QUZLD4G/wellness-wordle.jpg",
+         "https://www.epfitnesstrainer.com/wp-content/uploads/2021/03/health-and-wellbeing-blog.jpg",
         "https://www.nikkistalk.co.in/wp-content/uploads/2024/02/Orange-Brown-Colorful-Fashion-Business-Blog-Banner-2.jpg",
         "https://yoga.ayush.gov.in/public/assets/front/blog/eys.jpg"
     ];
