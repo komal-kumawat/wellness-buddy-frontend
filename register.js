@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const registerRoute = "http://localhost:5000/api/auth/register";
+    // Replace with your deployed backend URL
+    const registerRoute = "https://komal-kumawat.github.io/wellness-buddy-backend/api/auth/register";
 
     document.getElementById("registerForm").addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -21,17 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 const data = response.data;
                 if (data.status === false) {
                     console.log(data);
-                    alert("error registering");
+                    alert("Error registering");
                 }
                 if (data.status === true) {
-                    console.log("registered user");
-                    alert("successfully registered");
+                    console.log("Registered user");
+                    alert("Successfully registered");
                     localStorage.setItem("user", JSON.stringify(data.user));
                     window.location.href = "login.html";
-                   
                 }
             } catch (error) {
-                alert("registration failed");
+                alert("Registration failed");
                 console.log("Registration failed", error);
             }
         }
@@ -40,20 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleValidation(values) {
         const { password, confirmPassword, username, email } = values;
 
-        if (password !== confirmPassword) {
-            alert("password and confirm password must be same ");
+        if (!validateEmail(email)) {
+            alert("Invalid email format");
+            return false;
+        } else if (password !== confirmPassword) {
+            alert("Password and confirm password must be the same");
             return false;
         } else if (password.length < 6) {
-            alert("password must be greater than 5 characters");
+            alert("Password must be at least 6 characters");
             return false;
-        } else if (!email) {
-            alert("Email is required");
-            return false;
-        } else if (username.length < 3) {
-            alert("Username should be greater than 3 characters");
+        } else if (!username || username.length < 3) {
+            alert("Username should be at least 3 characters");
             return false;
         }
 
         return true;
+    }
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     }
 });

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
 
-    const loginRoute = 'http://localhost:5000/api/auth/login';
+    const loginRoute = "https://komal-kumawat.github.io/wellness-buddy-backend/api/auth/login";
 
     function handleValidation() {
         const email = emailInput.value;
