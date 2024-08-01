@@ -4,10 +4,14 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     const slides = [
-        "https://images.squarespace-cdn.com/content/v1/5d1bfb1928c4c60001b97d89/1596231389940-QZWRDWMHXBGM5QUZLD4G/wellness-wordle.jpg",
-         "https://www.epfitnesstrainer.com/wp-content/uploads/2021/03/health-and-wellbeing-blog.jpg",
+        "https://yoga.ayush.gov.in/public/assets/front/blog/eys.jpg",
+
+        "https://www.drjimtaylor.com/4.0/wp-content/uploads/2021/01/mentalhealth.jpg",
+        "https://news.illinoisstate.edu/files/2021/01/Wellness-graphic.jpg",
+        // "https://www.shutterstock.com/image-vector/wellness-apple-word-cloud-collage-260nw-564483214.jpg",
+        //  "https://image.jimcdn.com/app/cms/image/transf/dimension=323x1024:format=jpg/path/s185505b304b4d660/image/i1ab2adf221c9dac7/version/1511655488/image.jpg",
         "https://www.nikkistalk.co.in/wp-content/uploads/2024/02/Orange-Brown-Colorful-Fashion-Business-Blog-Banner-2.jpg",
-        "https://yoga.ayush.gov.in/public/assets/front/blog/eys.jpg"
+
     ];
 
 
@@ -19,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => {
         currentSlide = (currentSlide + 1) % slides.length;
         sliderImage.src = slides[currentSlide];
-    }, 6000);
+    }, 3000);
 
     // Mock data for news articles
     const newsData = [
