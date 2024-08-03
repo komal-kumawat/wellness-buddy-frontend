@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (password.length < 6) {
             alert("Password must be at least 6 characters");
             return false;
-        } else if (!username || username.length < 3) {
+        } else if (!username || username.length < 4) {
             alert("Username should be at least 3 characters");
             return false;
         }
