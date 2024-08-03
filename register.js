@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Replace with your deployed backend URL
-    const registerRoute = "https://komal-kumawat.github.io/wellness-buddy-backend/api/auth/register";
+    const registerRoute = "http://localhost:5000/api/auth/register";
 
     document.getElementById("registerForm").addEventListener("submit", async (event) => {
         event.preventDefault();
